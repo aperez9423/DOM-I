@@ -107,10 +107,16 @@ navItems[2].style.color = 'green';
 navItems[3].style.color = 'green';
 navItems[4].style.color = 'green';
 navItems[5].style.color = 'green';
-navItems[6].style.color = 'green';
-navItems[7].style.color = 'green';
 
-let nav = document.querySelector('nav')
-let lastAnchor = document.createElement('a');
+let nav = document.getElementsByTagName("nav");
+let lastAnchor = document.createElement("a");
+lastAnchor.href = "#";
+lastAnchor.style.color = 'green';
 lastAnchor.textContent = "The End";
-nav.appendChild(lastAnchor);
+nav[0].appendChild(lastAnchor);
+
+let firstAnchor = document.createElement("a");
+firstAnchor.href = "#";
+firstAnchor.style.color = 'green';
+firstAnchor.textContent = "The Beginning";
+nav[0].prepend(firstAnchor);
